@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="menu">
+      <div class="item"><a href="#/">Home</a></div>
+      <div class="item"><a href="#/latest">Latest</a></div>
+      <div class="item"><a href="#/top">Top</a></div>
+      <div class="item"><a href="#/submit">Submit</a></div>
+    </div>
+    <div class="app" id="app">
+    </div>
+    <script id="cats-list" type="text/x-handlebars-template">
+      <div class="kittens">
+        {{#each cats as | cat |}}
+        <div class="kitten">
+          <div class="img">
+            <img width="100%" src="{{url}}" />
+          </div>
+           <div class="header">
+             <strong>{{name}}</strong> <br />
+             Rating: {{rating}}
+             <br />
+             <button onclick="paw({{ toJSON cat }})">Paw</button><button onclick="removeKitty({{id}})">Remove</button>
+           </div>
+        </div>
+        {{/each}}
+      </div>
+    </script>
+    <script id="cat-submit" type="text/x-handlebars-template">
+      <div>
+      Upload kitten
+      </div>
+      <div>
+        <input type="file" placeholder="select cat image" />
+      </div>
+    </script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

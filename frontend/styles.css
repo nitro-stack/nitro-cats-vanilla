@@ -1,0 +1,69 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+body {
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  background: #303030;
+}
+
+.app {
+  margin: 20px;
+}
+
+.menu {
+  height: 30px;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  color: white;
+}
+
+.menu .item {
+  margin: 10px;
+}
+
+.menu .item a {
+  text-decoration: none;
+  padding: 20px 10px; 
+  color: white;
+}
+
+.kittens {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.kitten {
+  margin: 10px;
+  width: 200px;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.kitten .header {
+  padding: 20px;
+  background: white;
+}
+
+.kitten .img {
+  border-radius: 20px 20px 0 0;
+  background: white;
+}
+
+.kitten img {
+  border-radius: 20px 20px 0 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .kitten {
+    width: 100%;
+  }
+
+  .app {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
